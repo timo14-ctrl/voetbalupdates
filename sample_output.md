@@ -11,5 +11,6 @@
 - De FIFA start een onderzoek naar transfers bij meerdere topclubs.
 
 ## Context
-Dit overzicht toont hoe de agent actuele uitslagen combineert
-met relevant voetbalnieuws in een journalistiek format.
+Dit overzicht toont hoe de agent actuele uitslagen combineert met relevant voetbalnieuws in een journalistiek format.
+
+*Laatste update: 2025-12-15 12:00:00*
