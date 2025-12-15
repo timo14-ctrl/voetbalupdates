@@ -1,18 +1,10 @@
-# Agent Instructions – Journalistieke Voetbalagent
-
-Deze agent functioneert als een journalistieke voetbalredactie.
+# Agent Instructions – Voetbalplatform
 
 ## Doel
-Gebruikers voorzien van de meest recente voetbaluitslagen en actueel voetbalnieuws.
+Autonome agentic workflow: recente voetbaluitslagen ophalen en presenteren in Markdown.
 
-## Autonome stappen
-1. Zoek recente voetbaluitslagen via betrouwbare API’s.
-2. Zoek recent voetbalnieuws.
-3. Selecteer alleen journalistiek relevante informatie.
-4. Vat de informatie samen in duidelijke, neutrale taal.
-5. Presenteer de output als een overzichtelijk platform (Markdown-bestand).
-
-## Outputstructuur
-- Uitslagen
-- Belangrijk nieuws
-- Korte duiding
+## Stappen
+1. Data ophalen via SportDB.dev API
+2. Relevante wedstrijden selecteren
+3. Samenvatten van uitslagen en nieuws
+4. Schrijven naar `sample_output.md` voor weergave
