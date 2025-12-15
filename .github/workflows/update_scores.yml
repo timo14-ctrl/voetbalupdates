@@ -1,0 +1,27 @@
+name: Update Voetbaluitslagen
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # elke dag om 12:00 UTC
+  workflow_dispatch:      # handmatig starten
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run script
+        run: python update_scores.py
+      - name: Commit updated Markdown
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add sample_output.md
+          git commit -m "Update voetbaluitslagen" || echo "No changes to commit"
+          git push
