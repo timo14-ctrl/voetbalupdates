@@ -1,63 +1,24 @@
-# Journalistieke Voetbalagent – Live Uitslagen & Nieuws
+# Journalistieke Voetbalagent – Demo met SportDB.dev
 
 ## Doel
-Deze toepassing toont een journalistieke agentic AI die autonoom de nieuwste voetbaluitslagen en voetbalnieuws verzamelt, selecteert en samenvat voor lezers. 
+Autonoom platform dat actuele voetbaluitslagen en nieuws presenteert.
+Demo gebruikt de gratis "123" API-key van SportDB.dev.
 
-Het platform fungeert als een mini-nieuwsfeed of -platform, ideaal voor sportjournalisten die dagelijkse updates nodig hebben.
+## Werkwijze
+1. Script `update_scores.py` haalt laatste wedstrijden op.
+2. Markdown-output (`sample_output.md`) toont uitslagen en nieuws.
+3. GitHub Actions draait dagelijks om updates automatisch te committen.
+4. Agentic workflow: ophalen → selecteren → samenvatten → publiceren.
 
----
+## Bestanden
+- `update_scores.py` – Python-script voor uitslagen
+- `sample_output.md` – gegenereerde Markdown-feed
+- `agent_prompt.md` – instructies voor agent
+- `.github/workflows/update_scores.yml` – automatische workflow
+- `README.md` – uitleg en reflectie
 
-## Werkwijze (agentic)
+## Reflectie
+Agentic AI: workflow werkt autonoom met meerdere stappen.  
+Uitkomst: een automatisch bijgewerkt, journalistiek relevant platform.
 
-De agent werkt autonoom in meerdere stappen:
-
-1. **Verzamelen van data**  
-   - De agent haalt de laatste voetbaluitslagen op via een betrouwbare voetbal-API.
-   - Nieuwsitems worden toegevoegd (kan in een echte toepassing automatisch worden gekoppeld).
-
-2. **Selectie**  
-   - Alleen relevante en actuele informatie wordt opgenomen.
-
-3. **Analyse en samenvatting**  
-   - De uitslagen en nieuwsitems worden samengevat in duidelijke journalistieke taal.
-
-4. **Structurering van output**  
-   - Output wordt geschreven naar `sample_output.md` in Markdown.
-   - Structuur:
-     - Uitslagen
-     - Belangrijk nieuws
-     - Korte duiding
-
----
-
-## Live updates met GitHub Actions
-
-- Het Python-script `update_scores.py` haalt automatisch de laatste data op en schrijft dit naar `sample_output.md`.
-- Een **GitHub Action** draait dagelijks en commit automatisch de bijgewerkte Markdown.
-- De API-key wordt veilig opgeslagen als **repository secret**.
-
----
-
-## Bestanden in deze repository
-
-| Bestand | Functie |
-|---------|---------|
-| `README.md` | Uitleg van het project, agentic workflow en live update systeem |
-| `agent_prompt.md` | Instructies voor de agent |
-| `sample_output.md` | Outputvoorbeeld van het platform |
-| `update_scores.py` | Script dat uitslagen ophaalt en Markdown bijwerkt |
-| `.github/workflows/update_scores.yml` | Automatisering van dagelijkse updates |
-
----
-
-## Reflectie: waarom agentic AI?
-
-Deze toepassing is agentic omdat de AI zelfstandig meerdere stappen doorloopt: verzamelen, selecteren, samenvatten en presenteren van informatie. Dit bootst de routine van een journalist na en levert een nuttig, automatisch bijgewerkt platform.
-
----
-
-## Gebruik
-
-- Bekijk `sample_output.md` voor het resultaat.
-- Het platform wordt automatisch bijgewerkt via de GitHub Action en de voetbal-API.
 
